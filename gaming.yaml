@@ -1,0 +1,9 @@
+---
+
+- name: Install arch linux for gaming
+  hosts: hosts
+  connection: local
+  become: true
+
+  roles:
+    - { role: general, tags: ['general'] }

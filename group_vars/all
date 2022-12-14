@@ -1,0 +1,26 @@
+##
+# User configuration
+# ==================
+##
+user:
+    name: machaktom
+    group: users
+    shell: /bin/zsh
+
+
+##
+# Base package configuration
+# ==========================
+##
+base_packages:
+    - base-devel
+    - cronie
+    - openssh
+    - zsh
+    - htop
+    - nmap
+    - curl
+    - tmux
+    - git
+    - rsync
+    - lsof

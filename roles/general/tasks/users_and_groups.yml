@@ -1,0 +1,22 @@
+---
+
+- name: Create group user.group if it does not exists
+  ansible.builtin.group:
+    name: "{{ user.group }}"
+    state: present
+  when: user.name is defined
+
+- name: Create user user.name if it does not exists
+  ansible.builtin.user:
+    name: "{{ user.name }}"
+    shell: "{{ user.shell }}"
+    groups:
+      - "{{ user.group }}"
+      - network
+      - systemd-journal
+      - uucp
+    append: true
+    system: false
+    createhome: true
+    home: /home/{{ user.name }}
+  when: user.name is defined
