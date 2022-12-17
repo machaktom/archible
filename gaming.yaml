@@ -8,3 +8,4 @@
   roles:
     - { role: general, tags: ['general'] }
     - { role: network, tags: ['network'] }
+    - { role: xfce, tags: ['xfce'] }

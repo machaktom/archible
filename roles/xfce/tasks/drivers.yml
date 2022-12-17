@@ -1,0 +1,13 @@
+- name: Install Intel drivers
+  ansible.builtin.package:
+    name:
+      - mesa
+    state: present
+    when: system.graphics_card_1 == 'intel' or system.graphics_card_2 == 'intel'
+
+- name: Install NVIDIA drivers
+  ansible.builtin.package:
+    name:
+      - nvidia
+    state: present
+    when: system.graphics_card_1 == 'nvidia' or system.graphics_card_2 == 'nvidia'

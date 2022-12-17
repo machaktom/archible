@@ -24,3 +24,12 @@ base_packages:
     - git
     - rsync
     - lsof
+
+
+##
+# Hardware configuration
+# ==========================
+##
+system:
+    graphics_card_1: nvidia
+    graphics_card_2: intel 
