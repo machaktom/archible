@@ -1,0 +1,5 @@
+- name: Install Xfce
+  ansible.builtin.package:
+    name:
+      - xfce4
+    state: present
