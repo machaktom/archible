@@ -20,3 +20,9 @@
     createhome: true
     home: /home/{{ user.name }}
   when: user.name is defined
+
+- name: Install polkit
+  ansible.builtin.package:
+    name:
+      - polkit
+    state: present
