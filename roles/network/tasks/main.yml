@@ -11,5 +11,5 @@
 - name: Enable dhcp service
   ansible.builtin.service: name=dhcpcd state=started enabled=true
 
-- name: Enable network-systemd service
-  ansible.builtin.service: name=dhcpcd state=started enabled=true
+- name: Enable systemd-networkd service
+  ansible.builtin.service: name=systemd-networkd state=restarted enabled=true
