@@ -1,0 +1,15 @@
+---
+
+- name: Install network tools
+  ansible.builtin.package:
+    name:
+      - ethtool
+      - dhcpcd
+      - nmap
+    state: present
+
+- name: Enable dhcp service
+  ansible.builtin.service: name=dhcpcd state=started enabled=true
+
+- name: Enable network-systemd service
+  ansible.builtin.service: name=dhcpcd state=started enabled=true
