@@ -15,6 +15,7 @@
       - network
       - systemd-journal
       - uucp
+      - tty
     append: true
     system: false
     createhome: true
