@@ -1,0 +1,4 @@
+---
+
+- name: pkgfile update
+  ansible.builtin.command: pkgfile --update
