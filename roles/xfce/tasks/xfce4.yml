@@ -3,4 +3,5 @@
     name:
       - xfce4
       - xfce4-goodies
+      - xfwm4
     state: present
