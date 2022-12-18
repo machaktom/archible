@@ -1,0 +1,6 @@
+- name: Install Xorg
+  ansible.builtin.package:
+    name:
+      - xorg-server
+      - xorg-apps
+    state: present
