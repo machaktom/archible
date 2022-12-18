@@ -9,12 +9,7 @@
   retries: 10
   delay: 2
 
-- name: Copy xorg.conf file
-  ansible.builtin.copy:
-    src: xorg.conf
-    dest: /etc/X11/
-
 - name: Copy 20-intel.conf file
   ansible.builtin.copy:
     src: 20-intel.conf
-    dest: /etc/X11/xorg.conf.d
+    dest: /etc/X11/xorg.conf.d/
