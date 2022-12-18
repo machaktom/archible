@@ -4,6 +4,8 @@
       - mesa
     state: present
   when: system.graphics_card_1 == 'intel' or system.graphics_card_2 == 'intel'
+  retries: 10
+  delay: 2
 
 - name: Install NVIDIA drivers
   ansible.builtin.package:
@@ -11,3 +13,5 @@
       - nvidia
     state: present
   when: system.graphics_card_1 == 'nvidia' or system.graphics_card_2 == 'nvidia'
+  retries: 10
+  delay: 2
