@@ -23,5 +23,5 @@
     name:
       - pkgfile
     state: present
-    notify:
+  notify:
     - pkgfile update
