@@ -14,7 +14,7 @@
     src: xorg.conf
     dest: /etc/X11/
 
-- name: Copy 10-intel.conf file
+- name: Copy 20-intel.conf file
   ansible.builtin.copy:
-    src: 10-intel.conf
+    src: 20-intel.conf
     dest: /etc/X11/xorg.conf.d

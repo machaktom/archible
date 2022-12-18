@@ -1,6 +1,7 @@
 - name: Install Intel drivers
   ansible.builtin.package:
     name:
+      - xf86-video-intel
       - mesa
       - mesa-utils
     state: present
