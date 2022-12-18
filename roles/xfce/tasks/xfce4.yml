@@ -2,4 +2,5 @@
   ansible.builtin.package:
     name:
       - xfce4
+      - xfce4-goodies
     state: present
