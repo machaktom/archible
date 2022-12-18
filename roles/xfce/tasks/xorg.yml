@@ -9,7 +9,12 @@
   retries: 10
   delay: 2
 
-- name: Copy 20-intel.conf file
+- name: Copy 20-nvidia.conf file
   ansible.builtin.copy:
     src: 20-intel.conf
+    dest: /etc/X11/xorg.conf.d/
+
+- name: Copy 30-intel.conf file
+  ansible.builtin.copy:
+    src: 30-intel.conf
     dest: /etc/X11/xorg.conf.d/
