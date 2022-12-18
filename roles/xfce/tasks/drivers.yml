@@ -2,6 +2,7 @@
   ansible.builtin.package:
     name:
       - mesa
+      - mesa-utils
     state: present
   when: system.graphics_card_1 == 'intel' or system.graphics_card_2 == 'intel'
   retries: 10
@@ -11,6 +12,7 @@
   ansible.builtin.package:
     name:
       - nvidia
+      - nvidia-prime
     state: present
   when: system.graphics_card_1 == 'nvidia' or system.graphics_card_2 == 'nvidia'
   retries: 10

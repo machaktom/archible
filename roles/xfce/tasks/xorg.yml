@@ -8,3 +8,8 @@
   until: task_result is success
   retries: 10
   delay: 2
+
+- name: Copy xorg.conf file
+  ansible.builtin.copy:
+    src: xorg.conf
+    dest: /etc/X11/

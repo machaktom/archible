@@ -1,6 +1,6 @@
 ---
 
-- name: Pacman mirrorlist setup
+- name: Pacman /etc/pacman.d/mirrorlist
   ansible.builtin.copy:
     src: mirrorlist
     dest: /etc/pacman.d/
