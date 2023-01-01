@@ -4,5 +4,7 @@
   name: pacman
 - ansible.builtin.import_tasks: hostname.yml
   name: hostname
+- ansible.builtin.import_tasks: locale.yml
+  name: locale
 - ansible.builtin.import_tasks: users_and_groups.yml
   name: users_and_groups
