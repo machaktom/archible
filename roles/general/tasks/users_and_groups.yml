@@ -23,7 +23,7 @@
   when: user.name is defined
 
 - name: Install polkit
-  ansible.builtin.package:
+  community.general.pacman:
     name:
       - polkit
     state: present

@@ -1,5 +1,5 @@
 - name: Install Xorg
-  ansible.builtin.package:
+  community.general.pacman:
     name:
       - xorg-server
       - xorg-apps

@@ -1,7 +1,7 @@
 ---
 
 - name: Install network tools
-  ansible.builtin.package:
+  community.general.pacman:
     name:
       - ethtool
       - dhcpcd

@@ -19,7 +19,7 @@
     upgrade: true
 
 - name: Install extra for pacman and aur packages
-  ansible.builtin.package:
+  community.general.pacman:
     name:
       - pkgfile
     state: present
