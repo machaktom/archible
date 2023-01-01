@@ -9,4 +9,6 @@
   lineinfile:
     path: /etc/locale.conf
     create: True
+    state: present
+    regexp: "^LANG"
     line: 'LANG={{ locale }}'
