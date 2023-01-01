@@ -1,4 +1,11 @@
 ##
+# System configuration
+# ==================
+##
+hostname: lili
+
+
+##
 # User configuration
 # ==================
 ##
