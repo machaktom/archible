@@ -11,7 +11,7 @@
   ansible.builtin.file:
     src: /etc/skel/.zshrc
     dest: "/home/{{ user.name }}/.zshrc"
-    owner: "{{ user.shell }}"
-    group: "{{ user.shell }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"
     state: link
   when: user.shell == "/bin/zsh" or user.shell == "/usr/bin/zsh"
