@@ -17,11 +17,6 @@
     src: 'wpa_supplicant-{{ wifi.interface }}.conf'
     dest: '/etc/wpa_supplicant/wpa_supplicant-{{ wifi.interface }}.conf'
     mode: 0600
-  notify: Reconfigure wpa_supplicant
 
-- name: Enable network services
-  systemd:
-    name: '{{ item }}'
-    enabled: True
-  with_items:
-    - 'wpa_supplicant@{{ wifi.interface }}.service'
+- name: Enable 'wpa_supplicant@wlo1.service' service
+  ansible.builtin.service: name='wpa_supplicant@{{ wifi.interface }}.service' state=restarted enabled=true
