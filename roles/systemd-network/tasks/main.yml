@@ -1,0 +1,25 @@
+---
+
+- name: Install network tools
+  community.general.pacman:
+    name:
+      - ethtool
+    state: present
+
+- name: Copy /etc/systemd/network/20-eth.network
+  ansible.builtin.copy:
+    src: 20-eth.network
+    dest: /etc/systemd/network/
+
+- name: Enable systemd-networkd service
+  ansible.builtin.service: name=systemd-networkd state=restarted enabled=true
+
+- name: Enable systemd-resolved service
+  ansible.builtin.service: name=systemd-resolved state=restarted enabled=true
+
+- name: Link /run/systemd/resolve/stub-resolv.conf to /etc/resolv.conf
+  ansible.builtin.file:
+    src: /run/systemd/resolve/stub-resolv.conf
+    dest: /etc/resolv.conf
+    state: link
+    force: True
