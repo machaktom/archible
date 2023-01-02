@@ -9,4 +9,5 @@
     - { role: general, tags: ['general'] }
     - { role: users, tags: ['users'] }
     - { role: systemd-network, tags: ['systemd-network'] }
+    - { role: systemd-network-wifi, tags: ['systemd-network-wifi'] }
     - { role: xfce, tags: ['xfce'] }
