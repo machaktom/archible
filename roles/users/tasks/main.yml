@@ -1,0 +1,7 @@
+---
+
+- ansible.builtin.import_tasks: users_and_groups.yml
+  name: users_and_groups
+
+- ansible.builtin.import_tasks: zsh.yml
+  name: zsh

@@ -7,5 +7,6 @@
 
   roles:
     - { role: general, tags: ['general'] }
+    - { role: users, tags: ['users'] }
     - { role: network, tags: ['network'] }
     - { role: xfce, tags: ['xfce'] }

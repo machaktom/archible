@@ -1,0 +1,17 @@
+---
+
+- name: Install grml-zsh-config if zsh was set as shell
+  community.general.pacman:
+    name:
+      - grml-zsh-config
+    state: present
+  when: user.shell == "/bin/zsh" or user.shell == "/usr/bin/zsh"
+
+- name: Configure zsh to point to grml-zsh-config
+  ansible.builtin.file:
+    src: /etc/skel/.zshrc
+    dest: "/home/{{ user.name }}/.zshrc"
+    owner: "{{ user.shell }}"
+    group: "{{ user.shell }}"
+    state: link
+  when: user.shell == "/bin/zsh" or user.shell == "/usr/bin/zsh"
