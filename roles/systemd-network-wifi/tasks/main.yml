@@ -24,9 +24,4 @@
     name: '{{ item }}'
     enabled: True
   with_items:
-    - systemd-networkd.service
     - 'wpa_supplicant@{{ wifi.interface }}.service'
-
-
-- name: Enable systemd-networkd service
-  ansible.builtin.service: name=systemd-networkd state=restarted enabled=true
