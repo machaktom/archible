@@ -1,0 +1,7 @@
+# Enable DHCPv4 and DHCPv6 on all ethernet links
+[Match]
+Type=wl*
+
+[Network]
+DHCP=yes
+

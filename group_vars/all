@@ -4,6 +4,8 @@
 ##
 hostname: lili
 locale: en_US.UTF-8
+wifi:
+    interface: wlo1
 
 
 ##

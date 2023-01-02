@@ -1,0 +1,32 @@
+---
+
+- name: Install wpa_supplicant
+  community.general.pacman:
+    name:
+      - ethtool
+      - wpa_supplicant
+    state: present
+
+- name: Copy /etc/systemd/network/20-wifi.network
+  ansible.builtin.copy:
+    src: 20-wifi.network
+    dest: /etc/systemd/network/
+
+- name: Create wpa_supplicant interface file
+  copy:
+    src: 'wpa_supplicant-{{ wifi.interface }}.conf'
+    dest: '/etc/wpa_supplicant/wpa_supplicant-{{ wifi.interface }}.conf'
+    mode: 0600
+  notify: Reconfigure wpa_supplicant
+
+- name: Enable network services
+  systemd:
+    name: '{{ item }}'
+    enabled: True
+  with_items:
+    - systemd-networkd.service
+    - 'wpa_supplicant@{{ wifi.interface }}.service'
+
+
+- name: Enable systemd-networkd service
+  ansible.builtin.service: name=systemd-networkd state=restarted enabled=true
