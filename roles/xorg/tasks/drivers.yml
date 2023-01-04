@@ -6,5 +6,3 @@
       - mesa-utils
     state: present
   when: system.graphics_card_1 == 'intel' or system.graphics_card_2 == 'intel'
-  retries: 10
-  delay: 2

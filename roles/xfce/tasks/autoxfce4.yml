@@ -1,0 +1,15 @@
+- name: Adding exec startxfce4 to ~/.zshenv
+  ansible.builtin.blockinfile:
+    path: "/home/{{ user.name }}/.zshenv"
+    backup: True
+    create: True
+    block: |
+      if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+        exec startxfce4
+      fi
+    marker_begin: "Added by xfce/autoxfce4 role"
+    when: user.shell == "/bin/zsh" or user.shell == "/usr/bin/zsh"
+      
+
+    
+

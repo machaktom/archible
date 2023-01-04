@@ -1,0 +1,6 @@
+---
+
+- ansible.builtin.import_tasks: xfce4.yml
+  name: xfce4
+- ansible.builtin.import_tasks: autoxfce4.yml
+  name: autoxfce4
