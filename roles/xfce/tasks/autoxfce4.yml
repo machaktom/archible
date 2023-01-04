@@ -8,7 +8,7 @@
         exec startxfce4
       fi
     marker_begin: "Added by xfce/autoxfce4 role"
-    when: user.shell == "/bin/zsh" or user.shell == "/usr/bin/zsh"
+  when: user.shell == "/bin/zsh" or user.shell == "/usr/bin/zsh"
       
 
     
