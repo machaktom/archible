@@ -37,6 +37,15 @@ base_packages:
 
 
 ##
+# Extra package configuration
+# ==========================
+##
+extra_packages:
+    - tree
+    - nano
+
+
+##
 # Hardware configuration
 # ==========================
 ##

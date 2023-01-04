@@ -6,3 +6,5 @@
   name: hostname
 - ansible.builtin.import_tasks: locale.yml
   name: locale
+- ansible.builtin.import_tasks: extra-packages.yml
+  name: extra-packages
