@@ -1,7 +1,8 @@
-- name: Adding exec startxfce4 to ~/.zshenv
+- name: Adding exec startxfce4 to users ~/.zshenv
   ansible.builtin.blockinfile:
     path: "/home/{{ user.name }}/.zshenv"
     owner: "{{ user.name }}"
+    group: "{{ user.name }}"
     backup: True
     create: True
     block: |
