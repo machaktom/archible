@@ -4,5 +4,3 @@
   name: xorg
 - ansible.builtin.import_tasks: drivers.yml
   name: drivers
-- ansible.builtin.import_tasks: xfce4.yml
-  name: xfce4
