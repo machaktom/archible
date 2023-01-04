@@ -1,6 +1,6 @@
 ---
 
-- ansible.builtin.import_tasks: xorg.yml
-  name: xorg
+- ansible.builtin.import_tasks: xorg-server.yml
+  name: xorg-server
 - ansible.builtin.import_tasks: drivers.yml
   name: drivers
