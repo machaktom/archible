@@ -4,3 +4,5 @@
   name: xsettings
 - ansible.builtin.import_tasks: xfwm4.yml
   name: xfwm4
+- ansible.builtin.import_tasks: xfce4-screensaver.yml
+  name: xfce4-screensaver

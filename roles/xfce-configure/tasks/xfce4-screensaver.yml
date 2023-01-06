@@ -1,0 +1,9 @@
+- name: Xfce configure screensaver
+  become_user: '{{ user.name }}'
+  environment:
+    DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+  community.general.xfconf :
+    channel: "xfce4-screensaver"
+    property: /saver/idle-activation/delay
+    value: '{{ xfce.xfce4-screensaver.delay }}'
+    value_type: int
