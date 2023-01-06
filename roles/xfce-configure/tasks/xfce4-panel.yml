@@ -1,0 +1,9 @@
+- name: Xfce panel. Changing application menu icon
+  become_user: '{{ user.name }}'
+  environment:
+    DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+  community.general.xfconf :
+    channel: "xfce4-panel"
+    property: /panels/panel-1/button-icon
+    value: '{{ xfce.xfce4_panel.button_icon }}'
+    value_type: string
