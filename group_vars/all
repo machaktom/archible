@@ -4,8 +4,7 @@
 ##
 hostname: lili
 locale: en_US.UTF-8
-wifi:
-    interface: wlo1
+timezone: Europe/Stpckholm
 
 
 ##
@@ -51,4 +50,6 @@ extra_packages:
 ##
 system:
     graphics_card_1: nvidia
-    graphics_card_2: intel 
+    graphics_card_2: intel
+wifi:
+    interface: wlo1
