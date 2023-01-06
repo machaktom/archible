@@ -1,0 +1,9 @@
+---
+
+- name: Install Pulseaudio
+  community.general.pacman:
+    name:
+      - pulseaudio
+      - pulseaudio-alsa
+      - pulseaudio-bluetooth
+    state: present
