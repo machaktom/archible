@@ -1,4 +1,4 @@
-- name: Xfce panel. Changing application menu icon
+- name: Xfce panel. Configuring menu icon
   become_user: '{{ user.name }}'
   environment:
     DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
@@ -7,3 +7,14 @@
     property: /plugins/plugin-1/button-icon
     value: '{{ xfce.xfce4_panel.button_icon }}'
     value_type: string
+
+
+- name: Xfce panel. Configuring button title
+  become_user: '{{ user.name }}'
+  environment:
+    DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+  community.general.xfconf :
+    channel: "xfce4-panel"
+    property: /plugins/plugin-1/show-button-title
+    value: '{{ xfce.xfce4_panel.show_button_title }}'
+    value_type: bool
