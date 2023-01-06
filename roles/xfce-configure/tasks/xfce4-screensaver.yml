@@ -5,7 +5,7 @@
   community.general.xfconf :
     channel: "xfce4-screensaver"
     property: /saver/idle-activation/delay
-    value: '{{ xfce.xfce4-screensaver.delay }}'
+    value: '{{ xfce.xfce4_screensaver.delay }}'
     value_type: int
 
 - name: Debug command
