@@ -1,0 +1,9 @@
+- name: Xfce set window manager theme
+  become_user: '{{ user.name }}'
+  environment:
+    DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+  community.general.xfconf :
+    channel: "xfwm4"
+    property: /general/theme
+    value: '{{ xfce.xsettings.theme_name }}'
+    value_type: string

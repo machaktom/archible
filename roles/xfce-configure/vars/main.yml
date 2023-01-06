@@ -3,5 +3,8 @@
 # ==================
 ##
 xfce:
+  xsettings:
     # Available default themes: 'Adwaita-dark', 'Adwaita' or 'High Contrast'
     theme_name: Adwaita-dark
+  xfwm4:
+    theme: Kokodi

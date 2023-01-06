@@ -1,4 +1,6 @@
 ---
 
-- ansible.builtin.import_tasks: theme.yml
-  name: theme
+- ansible.builtin.import_tasks: xsettings.yml
+  name: xsettings
+- ansible.builtin.import_tasks: xfwm4.yml
+  name: xfwm4

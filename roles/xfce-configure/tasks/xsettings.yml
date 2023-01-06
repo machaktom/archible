@@ -1,9 +1,9 @@
-- name: Xfce set theme
+- name: Xfce set xsettings theme
   become_user: '{{ user.name }}'
   environment:
     DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
   community.general.xfconf :
     channel: "xsettings"
     property: /Net/ThemeName
-    value: '{{ xfce.theme_name }}'
+    value: '{{ xfce.xfwm4.theme }}'
     value_type: string

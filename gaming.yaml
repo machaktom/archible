@@ -12,4 +12,4 @@
     - { role: systemd-network-wifi, tags: ['systemd-network-wifi'] }
     - { role: xorg, tags: ['xorg'] }
     - { role: xfce, tags: ['xfce'] }
-    - { role: xfce-configure, tags: ['xfce-configure'] }
+    - { role: xfce-configure, tags: ['xfce-configure'] } # Requires X11 running by user
