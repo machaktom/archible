@@ -13,3 +13,4 @@ xfce:
   xfce4_panel:
     button_icon: org.xfce.panel.whiskermenu
     show_button_title: false
+    remove_panel_2: True
