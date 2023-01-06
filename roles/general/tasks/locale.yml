@@ -1,7 +1,7 @@
 ---
 
-- name: Set timezone to system.timezone
-  timezone: name={{ system.timezone }}
+- name: Set timezone
+  timezone: name={{ timezone }}
 
 - name: Generate locale
   locale_gen:
