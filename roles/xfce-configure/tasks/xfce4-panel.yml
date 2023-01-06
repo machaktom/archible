@@ -21,12 +21,13 @@
 
 
 - name: Xfce panel. Removing panel 2
+  # It removes only reference to the panel 2...
   become_user: '{{ user.name }}'
   environment:
     DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
   community.general.xfconf:
     channel: "xfce4-panel"
     property: /panels
-    value: 0
+    value: 1
     value_type: int
     force_array: true
