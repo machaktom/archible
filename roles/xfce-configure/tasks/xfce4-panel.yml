@@ -4,6 +4,6 @@
     DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
   community.general.xfconf :
     channel: "xfce4-panel"
-    property: /panels/panel-1/button-icon
+    property: /plugins/plugin-1/button-icon
     value: '{{ xfce.xfce4_panel.button_icon }}'
     value_type: string
