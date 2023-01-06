@@ -5,5 +5,5 @@
   community.general.xfconf :
     channel: "xsettings"
     property: /Net/ThemeName
-    value: '{{ xfce.xfwm4.theme }}'
+    value: '{{ xfce.xsettings.theme_name }}'
     value_type: string
