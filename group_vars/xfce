@@ -1,0 +1,7 @@
+##
+# Xfce configuration
+# ==================
+##
+xfce:
+    # Available default themes: 'Adwaita-dark', 'Adwaita' or 'High Contrast'
+    theme_name: Adwaita-dark

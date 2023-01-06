@@ -1,0 +1,7 @@
+- name: Xfce set theme
+  become_user: '{{ user.name }}'
+  community.general.xfconf :
+    channel: "xsettings"
+    property: /Net/ThemeName
+    value: '{{ xfce.theme_name }}'
+    value_type: string

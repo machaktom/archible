@@ -1,4 +1,4 @@
-- name: Install Xorg
+- name: Install Xorg server
   community.general.pacman:
     name:
       - xorg-server
