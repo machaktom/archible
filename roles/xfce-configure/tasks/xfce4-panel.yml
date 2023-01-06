@@ -30,4 +30,3 @@
     value: 0
     value_type: int
     force_array: true
-  when: '{{ xfce.xfce4_panel.remove_panel_2 }}'
