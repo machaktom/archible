@@ -7,7 +7,3 @@
     property: /saver/idle-activation/delay
     value: '{{ xfce.xfce4_screensaver.delay }}'
     value_type: int
-
-- name: Debug command
-  debug:
-    msg: "{{ cmd }}"
