@@ -13,3 +13,5 @@
     - { role: xorg, tags: ['xorg'] }
     - { role: xfce, tags: ['xfce'] }
     - { role: xfce-configure, tags: ['xfce-configure'] } # Requires X11 running by user
+    - { role: chromium, tags: ['chromium'] }
+    - { role: firefox, tags: ['firefox'] }
