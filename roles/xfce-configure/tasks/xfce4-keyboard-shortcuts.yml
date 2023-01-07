@@ -7,5 +7,5 @@
     property: '{{ item.0.key }}'
     value: '{{ item.0.value }}'
     value_type: string
-  loop: "{{ xfce4_keyboard_shortcuts | dict2items | subelements('value') }}"
+  loop: "{{ xfce.xfce4_keyboard_shortcuts | dict2items | subelements('value') }}"
   when: run_user_bus_socket.stat.exists
