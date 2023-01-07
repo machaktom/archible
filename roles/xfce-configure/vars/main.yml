@@ -8,6 +8,7 @@ xfce:
     theme_name: Adwaita-dark
   xfwm4:
     theme: Kokodi
+    button_layout: O|HMC
   xfce4_screensaver:
     delay: 55
   xfce4_panel:

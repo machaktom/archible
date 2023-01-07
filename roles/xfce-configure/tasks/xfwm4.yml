@@ -8,3 +8,15 @@
     value: '{{ xfce.xfwm4.theme }}'
     value_type: string
   when: run_user_bus_socket.stat.exists
+
+
+- name: Xfce window manager. Configuring button layout
+  become_user: '{{ user.name }}'
+  environment:
+    DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+  community.general.xfconf :
+    channel: "xfwm4"
+    property: /general/button_layout
+    value: '{{ xfce.xfwm4.button_layout }}'
+    value_type: string
+  when: run_user_bus_socket.stat.exists
