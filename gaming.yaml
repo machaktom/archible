@@ -16,3 +16,4 @@
     - { role: chromium, tags: ['chromium'] }
     - { role: firefox, tags: ['firefox'] }
     - { role: pulseaudio, tags: ['pulseaudio'] }
+    - { role: nvidia, tags: ['nvidia'] }
