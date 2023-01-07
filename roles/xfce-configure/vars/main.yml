@@ -18,10 +18,10 @@ xfce:
     # Strings only
     '/xfwm4/custom/<Alt>F5': shade_window_key
     '/xfwm4/custom/<Alt>F7': maximize_window_key
-  xfce4_power_management_int:
+  xfce4_power_manager_int:
     # Integers only
     '/xfce4-power-manager/blank-on-ac': 60
     '/xfce4-power-manager/dpms-on-ac-sleep': 0
     '/xfce4-power-manager/dpms-on-ac-off': 0
-  xfce4_power_management_bool:
+  xfce4_power_manager_bool:
     '/xfce4-power-manager/dpms-enabled': true
