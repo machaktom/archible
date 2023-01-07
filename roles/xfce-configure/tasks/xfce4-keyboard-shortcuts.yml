@@ -4,8 +4,8 @@
     DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
   community.general.xfconf :
     channel: "xfce4-keyboard-shortcuts"
-    property: '{{ item.0.key }}'
-    value: '{{ item.0.value }}'
+    property: '{{ item.key }}'
+    value: '{{ item.value }}'
     value_type: string
   loop: "{{ xfce.xfce4_keyboard_shortcuts | dict2items }}"
   when: run_user_bus_socket.stat.exists
