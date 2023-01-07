@@ -10,3 +10,5 @@
   name: xfce4-screensaver
 - ansible.builtin.import_tasks: xfce4-panel.yml
   name: xfce4-panel
+- ansible.builtin.import_tasks: xfce4-keyboard-shortcuts.yml
+  name: xfce4-keyboard-shortcuts

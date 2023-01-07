@@ -1,0 +1,11 @@
+- name: Xfce keyboard shortcuts.
+  become_user: '{{ user.name }}'
+  environment:
+    DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+  community.general.xfconf :
+    channel: "xfce4-keyboard-shortcuts"
+    property: '{{ item.0.key }}'
+    value: '{{ item.0.value }}'
+    value_type: string
+  loop: "{{ xfce4_keyboard_shortcuts | dict2items | subelements('value') }}"
+  when: run_user_bus_socket.stat.exists

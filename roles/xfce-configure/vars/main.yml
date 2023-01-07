@@ -14,3 +14,6 @@ xfce:
   xfce4_panel:
     button_icon: org.xfce.panel.whiskermenu
     show_button_title: false
+  xfce4_keyboard_shortcuts:
+    '/xfwm4/custom/<Alt>F5': shade_window_key
+    '/xfwm4/custom/<Alt>F7': maximize_window_key
