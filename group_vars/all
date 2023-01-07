@@ -26,7 +26,6 @@ base_packages:
     - cronie
     - openssh
     - zsh
-    - htop
     - nmap
     - curl
     - tmux
@@ -42,6 +41,7 @@ base_packages:
 extra_packages:
     - tree
     - nano
+    - htop
 
 
 ##
