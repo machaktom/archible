@@ -12,3 +12,5 @@
   name: xfce4-panel
 - ansible.builtin.import_tasks: xfce4-keyboard-shortcuts.yml
   name: xfce4-keyboard-shortcuts
+- ansible.builtin.import_tasks: xfce4-power-management.yml
+  name: xfce4-power-management
