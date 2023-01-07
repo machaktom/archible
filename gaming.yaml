@@ -12,8 +12,8 @@
     - { role: systemd-network-wifi, tags: ['systemd-network-wifi'] }
     - { role: xorg, tags: ['xorg'] }
     - { role: xfce, tags: ['xfce'] }
-    - { role: xfce-configure, tags: ['xfce-configure'] } # Requires X11 running by user
+    - { role: xfce-configure, tags: ['xfce-configure'] } # Ignored if X11 is not run user
     - { role: chromium, tags: ['chromium'] }
     - { role: firefox, tags: ['firefox'] }
     - { role: pulseaudio, tags: ['pulseaudio'] }
-    - { role: nvidia, tags: ['nvidia'] }
+    - { role: blacklist_nouveau, tags: ['blacklist_nouveau'] }
