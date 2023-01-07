@@ -18,6 +18,6 @@
     channel: "xfce4-power-management"
     property: '{{ item.key }}'
     value: '{{ item.value }}'
-    value_type: boolean
+    value_type: bool
   loop: "{{ xfce.xfce4_power_management_bool | dict2items }}"
   when: run_user_bus_socket.stat.exists
