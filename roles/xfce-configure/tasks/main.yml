@@ -1,5 +1,7 @@
 ---
 
+- ansible.builtin.import_tasks: check_user_bus.yml
+  name: check_user_bus
 - ansible.builtin.import_tasks: xsettings.yml
   name: xsettings
 - ansible.builtin.import_tasks: xfwm4.yml

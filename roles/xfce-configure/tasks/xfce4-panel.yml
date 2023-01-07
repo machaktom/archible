@@ -1,6 +1,3 @@
-- ansible.builtin.import_tasks: check_user_bus.yml
-  name: check_user_bus
-
 - name: Xfce panel. Configuring menu icon
   become_user: '{{ user.name }}'
   environment:
