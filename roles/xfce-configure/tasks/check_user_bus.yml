@@ -1,0 +1,4 @@
+- name: Check that /run/user/1000/bus exists
+  stat:
+    path: /run/user/1000/bus
+  register: run_user_bus_socket

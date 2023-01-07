@@ -1,3 +1,6 @@
+- ansible.builtin.import_tasks: check_user_bus.yml
+  name: check_user_bus
+
 - name: Xfce panel. Configuring menu icon
   become_user: '{{ user.name }}'
   environment:
@@ -7,6 +10,7 @@
     property: /plugins/plugin-1/button-icon
     value: '{{ xfce.xfce4_panel.button_icon }}'
     value_type: string
+  when: run_user_bus_socket.stat.exists
 
 
 - name: Xfce panel. Configuring button title
@@ -18,6 +22,7 @@
     property: /plugins/plugin-1/show-button-title
     value: '{{ xfce.xfce4_panel.show_button_title }}'
     value_type: bool
+  when: run_user_bus_socket.stat.exists
 
 
 - name: Xfce panel. Removing panel 2
@@ -31,3 +36,4 @@
     value: 1
     value_type: int
     force_array: true
+  when: run_user_bus_socket.stat.exists

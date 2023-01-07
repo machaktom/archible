@@ -1,3 +1,6 @@
+- ansible.builtin.import_tasks: check_user_bus.yml
+  name: check_user_bus
+
 - name: Xfce set xsettings theme
   become_user: '{{ user.name }}'
   environment:
@@ -7,3 +10,4 @@
     property: /Net/ThemeName
     value: '{{ xfce.xsettings.theme_name }}'
     value_type: string
+  when: run_user_bus_socket.stat.exists

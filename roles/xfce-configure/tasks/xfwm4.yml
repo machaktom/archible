@@ -1,3 +1,6 @@
+- ansible.builtin.import_tasks: check_user_bus.yml
+  name: check_user_bus
+
 - name: Xfce set window manager theme
   become_user: '{{ user.name }}'
   environment:
@@ -7,3 +10,4 @@
     property: /general/theme
     value: '{{ xfce.xfwm4.theme }}'
     value_type: string
+  when: run_user_bus_socket.stat.exists
