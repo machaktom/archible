@@ -1,0 +1,11 @@
+- name: Xfce power management.
+  become_user: '{{ user.name }}'
+  environment:
+    DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+  community.general.xfconf :
+    channel: "xfce4-power-management"
+    property: '{{ item.key }}'
+    value: '{{ item.value }}'
+    value_type: int
+  loop: "{{ xfce.xfce4_power_management | dict2items }}"
+  when: run_user_bus_socket.stat.exists
