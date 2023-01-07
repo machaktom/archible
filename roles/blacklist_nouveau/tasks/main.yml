@@ -1,4 +1,4 @@
 ---
 
-- ansible.builtin.import_tasks: disable_nouveau.yml
-  name: disable_nouveau
+- ansible.builtin.import_tasks: blacklist_nouveau.yml
+  name: blacklist_nouveau
