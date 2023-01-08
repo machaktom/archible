@@ -9,7 +9,7 @@
 - name: Enable UFW systemd service
   ansible.builtin.service: name=ufw state=restarted enabled=true
 
-- name: Allow everything and enable UFW
+- name: Deny everything and enable UFW
   community.general.ufw:
     state: enabled
     policy: deny

@@ -13,3 +13,14 @@
     section: multilib-testing
     option: Include
     value: /etc/pacman.d/mirrorlist
+
+- name: Perform full system upgrade
+  community.general.pacman:
+    update_cache: true
+    upgrade: true
+
+- name: Install lib32-nvidia-utils
+  community.general.pacman:
+    name:
+      - lib32-nvidia-utils
+    state: present
