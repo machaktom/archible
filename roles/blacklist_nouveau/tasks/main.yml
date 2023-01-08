@@ -1,4 +1,0 @@
----
-
-- ansible.builtin.import_tasks: blacklist_nouveau.yml
-  name: blacklist_nouveau
