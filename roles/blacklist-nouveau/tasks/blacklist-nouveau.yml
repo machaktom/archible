@@ -1,7 +1,0 @@
-- name: Blacklist nouveau with /etc/modprobe.d/blacklist.conf
-  lineinfile:
-    path: /etc/modprobe.d/blacklist.conf
-    create: True
-    state: present
-    regexp: "nouveau$"
-    line: 'blacklist nouveau'
