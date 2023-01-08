@@ -1,7 +1,7 @@
 ---
 
 - name: Enable multilib in /etc/pacman.conf
-  ineinfile:
+  lineinfile:
     dest: /etc/pacman.conf
     regexp: '^[multilib]\n#Include = /etc/pacman.d/mirrorlist$'
     line: '[multilib]\nInclude = /etc/pacman.d/mirrorlist'
