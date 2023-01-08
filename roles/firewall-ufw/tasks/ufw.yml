@@ -5,3 +5,7 @@
     name:
       - ufw
     state: present
+
+
+- name: Enable UFW service
+  ansible.builtin.service: name=ufw state=restarted enabled=true
