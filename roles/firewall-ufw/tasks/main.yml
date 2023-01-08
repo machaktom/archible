@@ -2,3 +2,5 @@
 
 - ansible.builtin.import_tasks: ufw.yml
   name: ufw
+- ansible.builtin.import_tasks: rules.yml
+  name: rules
