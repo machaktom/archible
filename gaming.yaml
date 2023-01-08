@@ -17,3 +17,5 @@
     - { role: firefox, tags: ['firefox'] }
     - { role: pulseaudio, tags: ['pulseaudio'] }
     - { role: blacklist_nouveau, tags: ['blacklist_nouveau'] }
+    - { role: firewall_ufw, tags: ['firewall_ufw'] }
+    - { role: firewall_gufw, tags: ['firewall_gufw'] }

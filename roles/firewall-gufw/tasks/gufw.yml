@@ -1,0 +1,7 @@
+---
+
+- name: Install UFW
+  community.general.pacman:
+    name:
+      - ufw
+    state: present
