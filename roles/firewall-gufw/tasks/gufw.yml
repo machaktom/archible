@@ -1,7 +1,7 @@
 ---
 
-- name: Install UFW
+- name: Install graphical frontend for UFW
   community.general.pacman:
     name:
-      - ufw
+      - gufw
     state: present
