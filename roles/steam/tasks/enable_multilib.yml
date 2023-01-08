@@ -1,13 +1,15 @@
 ---
 
 - name: Enable multilib in /etc/pacman.conf
-  lineinfile:
-    dest: /etc/pacman.conf
-    regexp: '^#[multilib]\n#Include = /etc/pacman.d/mirrorlist$'
-    line: '[multilib]\nInclude = /etc/pacman.d/mirrorlist'
+  community.general.ini_file:
+    path: /etc/pacman.conf
+    section: [multilib]
+    option: Include
+    value: /etc/pacman.d/mirrorlist
 
 - name: Enable multilib-testing in /etc/pacman.conf
-  lineinfile:
-    dest: /etc/pacman.conf
-    regexp: '^#[multilib-testing]\n#Include = /etc/pacman.d/mirrorlist$'
-    line: '[multilib-testing]\nInclude = /etc/pacman.d/mirrorlist'
+  community.general.ini_file:
+    path: /etc/pacman.conf
+    section: [multilib-testing]
+    option: Include
+    value: /etc/pacman.d/mirrorlist
