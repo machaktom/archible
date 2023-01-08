@@ -19,3 +19,4 @@
     - { role: blacklist-nouveau, tags: ['blacklist-nouveau'] }
     - { role: firewall-ufw, tags: ['firewall-ufw'] }
     - { role: firewall-gufw, tags: ['firewall-gufw'] }
+    - { role: steam, tags: ['steam'] }

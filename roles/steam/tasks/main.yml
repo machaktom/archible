@@ -1,0 +1,6 @@
+---
+
+- ansible.builtin.import_tasks: enable_multilib.yml
+  name: enable_multilib
+- ansible.builtin.import_tasks: steam.yml
+  name: steam
