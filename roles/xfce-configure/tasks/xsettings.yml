@@ -8,3 +8,15 @@
     value: '{{ xfce.xsettings.theme_name }}'
     value_type: string
   when: run_user_bus_socket.stat.exists
+
+
+- name: Set matching Xfwm4 theme
+  become_user: '{{ user.name }}'
+  environment:
+    DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+  community.general.xfconf :
+    channel: "xsettings"
+    property: /Xfce/SyncThemes
+    value: '{{ xfce.xsettings.sync_themes }}'
+    value_type: bool
+  when: run_user_bus_socket.stat.exists

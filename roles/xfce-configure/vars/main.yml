@@ -6,6 +6,7 @@ xfce:
   xsettings:
     # Available default themes: 'Adwaita-dark', 'Adwaita' or 'High Contrast'
     theme_name: Adwaita-dark
+    sync_themes: true
   xfwm4:
     theme: Kokodi
     button_layout: O|HMC
