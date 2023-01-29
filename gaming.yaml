@@ -20,3 +20,4 @@
     - { role: firewall-ufw, tags: ['firewall-ufw'] }
     - { role: firewall-gufw, tags: ['firewall-gufw'] }
     - { role: steam, tags: ['steam'] }
+    - { role: keepassxc, tags: ['keepassxc'] }
