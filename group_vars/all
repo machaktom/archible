@@ -1,26 +1,20 @@
-##
 # System configuration
 # ==================
-##
 hostname: lili
 locale: en_US.UTF-8
 timezone: Europe/Stockholm
 
 
-##
 # User configuration
 # ==================
-##
 user:
     name: machaktom
     group: users
     shell: /bin/zsh
 
 
-##
 # Base package configuration
 # ==========================
-##
 base_packages:
     - base-devel
     - cronie
@@ -34,20 +28,16 @@ base_packages:
     - lsof
 
 
-##
 # Extra package configuration
 # ==========================
-##
 extra_packages:
     - tree
     - nano
     - htop
 
 
-##
 # Hardware configuration
 # ==========================
-##
 system:
     graphics_card_1: nvidia
     graphics_card_2: intel
