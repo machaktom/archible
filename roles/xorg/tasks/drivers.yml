@@ -1,7 +1,6 @@
 - name: Install Intel drivers
   community.general.pacman:
     name:
-      - xf86-video-intel
       - mesa
       - mesa-utils
     state: present
