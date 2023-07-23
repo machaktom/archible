@@ -26,6 +26,8 @@ base_packages:
     - git
     - rsync
     - lsof
+    - man-db
+    - man-pages
 
 
 # Extra package configuration
